@@ -17,8 +17,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path: "scripts/bootstrap.sh"
   config.vm.provision :shell, path: "scripts/user.sh", privileged: false
   # config.vm.provision :shell, path: "scripts/run.sh", privileged: false, run: 'always'
-  config.vm.synced_folder "./data", "/data"
-  config.vm.synced_folder "./notebooks", "/home/ubuntu/notebooks"
+  config.vm.synced_folder "./data", "/data", type: "virtualbox"
+  config.vm.synced_folder "./notebooks", "/home/ubuntu/notebooks", type: "virtualbox"
   config.vm.network "private_network", ip: "172.16.11.11"
   config.vm.network "forwarded_port", guest: 8888, host: 8888
 
