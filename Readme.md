@@ -2,12 +2,14 @@
 
 I've created this script to help users set up an Ubuntu 16.04 virtual machine with Jupyter and Spark pre installed, set up and ready to use. This end product will give you access to the Jupyter interface reachable at [http://localhost:8888](http://localhost:8888) on your machine. There are only two dependencies to install, and the actual install of Apache Spark and Jupyter occurs within a virtual machine so should leave your host machine's settings untouched.
 
+I've tested this on MacOS 10.12.2 as well as Windows 10 now.
+
 ## Dependencies
 1. [VirtualBox](https://www.virtualbox.org) is a hypervisor which will allow us to run a self-contained linux virtual machine. Your host machine can be Mac OS X, Windows or indeed another Linux distribution. Visit the [downloads](https://www.virtualbox.org/wiki/Downloads) page to get the correct version for your system.
 2. [Vagrant](http://www.vagrantup.com) is a software package to automate the setup of VirtualBox virtual machines. This is what will be used to install and setup Apache Spark and Jupyter on the virtual machines without any user intervention required. Visit the [downloads](https://www.vagrantup.com/downloads.html) page, download and install the correct version for your system.
 
 ## Setup
-Make sure you are reliably connected to the internet before attempting this. Vagrant will need to download Ubuntu, Spark and all the other dependencies. The default virtual machine settings allocate 2GB of RAM and 2 CPU cores to the virtual machine. Make sure your host machine has this available! If you'd like to increse this, check the advanced settings section below.
+Make sure you are reliably connected to the internet before attempting this. Vagrant will need to download Ubuntu, Spark and all the other dependencies. The default virtual machine settings allocate 1GB of RAM and 2 CPU cores to the virtual machine. Make sure your host machine has this available! If you'd like to increse this, check the advanced settings section below.
 
 1.  Install the dependencies in the section above.
 2.  Download a zip of the latest files from [here](https://github.com/ragnarula/vagrant-spark/archive/master.zip)
@@ -36,4 +38,4 @@ These commands all must be run in a terminal within the ```vagrant-spark-master`
 To increase the cpu and ram for the virtual machine open the ```VagrantFile``` file in a text editor and edit the ```v.memory``` and ```v.cpus``` settings on lines 11 and 12 respectively. After editing make sure you recreate the virtual machine using ```vagrant destroy``` and then ```vagrant up```.
 
 ## Feedback
-I've only tested this on my machine which is a Mac. It should work on windows too, but if anyone has issues please contact me on Moodle, in class or via Github Issues above. Also feel free to send pull requests with bug fixes. 
+If anyone has issues please contact me on Moodle, in class or via Github Issues above. Also feel free to send pull requests with bug fixes. 
