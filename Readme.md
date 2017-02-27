@@ -6,7 +6,8 @@ I've created this script to help users set up an Ubuntu 16.04 virtual machine wi
 
 *  27/02/2017
   * Added support for Python3. Use the command ```pyspark3``` to start jupyter with python3 support. This seems to work better for coursework (See step 8).
-
+  * Added documentation of VT-x support
+  
 ## What is a virtual machine?
 From wikipedia:
  > In computing, a virtual machine (VM) is an emulation of a computer system.
