@@ -32,6 +32,7 @@ These commands all must be run in a terminal within the ```vagrant-spark-master`
 
 * To stop the virtual machine type ```vagrant halt```
 * To delete the machine type ```vagrant destroy```
+* To start the machine (after stopping or destroying) type ```vagrant up```
 
 ### Advanced Settings
 
