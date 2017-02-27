@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 export DEBIAN_FRONTEND=noninteractive
 
-/opt/anaconda/bin/conda create -n py35 anaconda
+/opt/anaconda/bin/conda create -n py35 python=3.5 anaconda
 
 cat > /home/ubuntu/.bashrc << END
 # add for anaconda install
