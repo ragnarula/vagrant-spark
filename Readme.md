@@ -8,6 +8,7 @@ I've created this script to help users set up an Ubuntu 16.04 virtual machine wi
 
 ## Setup
 Make sure you are reliably connected to the internet before attempting this. Vagrant will need to download Ubuntu, Spark and all the other dependencies.
+
 1.  Install the dependencies in the section above.
 2.  Download a zip of the latest files from [here](http://todo)
 3.  Extract the zip and copy the ```vagrant-spark``` folder to a convenient permanent directory, such as your documents folder.
