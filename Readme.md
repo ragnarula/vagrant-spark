@@ -15,7 +15,7 @@ Make sure you are reliably connected to the internet before attempting this. Vag
 4.  Open a terminal and ```cd``` to the ```vagrant-spark-master``` directory
 5.  Run the command ```vagrant up``` in the terminal
 6.  Go make some tea/coffee, this bit takes a while. Vagrant will download and install Apache Spark as well as the Python 2.7 version of Anaconda, which includes Jupyter and lots of other fun python datascience packages you can play with like numpy and scikitlearn.
-7.  Once complete un the command ```vagrant ssh``` in the same ```vagrant-spark``` directory in the terminal.
+7.  Once complete run the command ```vagrant ssh``` in the same ```vagrant-spark-master``` directory in the terminal.
 8.  You should now be connected to your virtual machine's terminal. Run the command ```pyspark```. This will start the Jupyter server.
 9.  In your web browser go to [http://localhost:8888](http://localhost:8888)
 10. You should see the Jupyter interface!
