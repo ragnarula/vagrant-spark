@@ -10,9 +10,9 @@ I've created this script to help users set up an Ubuntu 16.04 virtual machine wi
 Make sure you are reliably connected to the internet before attempting this. Vagrant will need to download Ubuntu, Spark and all the other dependencies.
 
 1.  Install the dependencies in the section above.
-2.  Download a zip of the latest files from [here](http://todo)
-3.  Extract the zip and copy the ```vagrant-spark``` folder to a convenient permanent directory, such as your documents folder.
-4.  Open a terminal and ```cd``` to the ```vagrant-spark``` directory
+2.  Download a zip of the latest files from [here](https://github.com/ragnarula/vagrant-spark/archive/master.zip)
+3.  Extract the zip and copy the ```vagrant-spark-master``` folder to a convenient permanent directory, such as your documents folder.
+4.  Open a terminal and ```cd``` to the ```vagrant-spark-master``` directory
 5.  Run the command ```vagrant up``` in the terminal
 6.  Go make some tea/coffee, this bit takes a while. Vagrant will download and install Apache Spark as well as the Python 2.7 version of Anaconda, which includes Jupyter and lots of other fun python datascience packages you can play with like numpy and scikitlearn.
 7.  Once complete un the command ```vagrant ssh``` in the same ```vagrant-spark``` directory in the terminal.
@@ -23,7 +23,7 @@ Make sure you are reliably connected to the internet before attempting this. Vag
 ## Usage
 
 ### Data and notebooks
-Within the ```vagrant-spark``` directory extracted from the downloaded zip, you should see two directories ```data``` and ```notebooks```. Any files placed in ```data``` will be accessible at the path ```/data``` from within a notebook. Any notebooks placed in the ```notebooks``` directory will show up in the ```notebooks``` directory in the Jupyter interface.
+Within the ```vagrant-spark-master``` directory extracted from the downloaded zip, you should see two directories ```data``` and ```notebooks```. Any files placed in ```data``` will be accessible at the path ```/data``` from within a notebook. Any notebooks placed in the ```notebooks``` directory will show up in the ```notebooks``` directory in the Jupyter interface.
 
 ## Feedback
 I've only tested this on my machine which is a Mac. It should work on windows too, but if anyone has issues please concat me on Moodle, in class or via Github Issues above.
