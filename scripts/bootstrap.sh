@@ -33,10 +33,10 @@ install -d /opt/spark
 cp -r spark-2.0.0-bin-hadoop2.7/* /opt/spark
 
 # configure SPARK_HOME in bashrc
-echo 'export SPARK_HOME' >> ~/.bashrc
-echo 'SPARK_HOME=/opt/spark' >> ~/.bashrc
+echo 'export SPARK_HOME' >> /home/ubuntu/.bashrc
+echo 'SPARK_HOME=/opt/spark' >> /home/ubuntu/.bashrc
 
-cat >> /etc/systemd/system/apache-spark.service << END
+cat > /etc/systemd/system/apache-spark.service << END
 [Unit]
 Description=Apache Spark Master and Slave Servers
 After=network.target
@@ -72,5 +72,12 @@ chmod +x $miniconda
 ./$miniconda -b -p /opt/anaconda
 
 rm $miniconda
+
+cat > /usr/local/sbin/pyspark3 << EOF
+#!/usr/bin/env bash
+source activate py35 && PYSPARK_PYTHON=python3 pyspark && source deactivate py35
+EOF
+
+chmod +x /usr/local/sbin/pyspark3
 
 sudo ufw allow 8888/tcp

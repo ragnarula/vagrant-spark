@@ -1,6 +1,9 @@
 *.log
 # Created by https://www.gitignore.io/api/windows,osx,linux,vagrant
-
+notebooks/*
+!notebooks/readme.txt
+data/*
+!data/readme.txt
 ### Linux ###
 *~
 

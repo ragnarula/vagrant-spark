@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 export DEBIAN_FRONTEND=noninteractive
 
-cat >> /home/ubuntu/.bashrc << END
+/opt/anaconda/bin/conda create -n py35 anaconda
+
+cat > /home/ubuntu/.bashrc << END
 # add for anaconda install
 PATH=/opt/anaconda/bin:\$PATH
 PATH=/opt/spark/bin:\$PATH
@@ -12,7 +14,7 @@ END
 install -d ~/.jupyter
 /opt/anaconda/bin/jupyter notebook --generate-config
 
-cat >> /home/ubuntu/.jupyter/jupyter_notebook_config.py << END
+cat > /home/ubuntu/.jupyter/jupyter_notebook_config.py << END
 c.NotebookApp.token = ''
 c.NotebookApp.password = ''
 c.NotebookApp.ip = '*'
