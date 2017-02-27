@@ -2,7 +2,13 @@
 
 I've created this script to help users set up an Ubuntu 16.04 virtual machine with Jupyter and Spark pre installed, set up and ready to use. This end product will give you access to the Jupyter interface reachable at [http://localhost:8888](http://localhost:8888) on your machine. There are only two dependencies to install, and the actual install of Apache Spark and Jupyter occurs within a virtual machine so should leave your host machine's settings untouched.
 
-I've tested this on MacOS 10.12.2 as well as Windows 10 now.
+## What is a virtual machine?
+From wikipedia:
+ > In computing, a virtual machine (VM) is an emulation of a computer system.
+ 
+In our case, a virtual machine is going to be an instance of a Linux system, running the Ubuntu 16.04 operating system with Spark and Jupyer pre installed on it. However, unlike a normal (non-virtual) machine, the operating system will be installed on to an emulated computer which you will run on your host machine, rather than onto physical hardware. In virtual machine terminology, the ```host machine``` is your physical laptop or desktop computer. This guide will work with host machines running Windows or MacOS. The ```guest machine``` is the emulated system, which in this case will have Ubuntu installed as it's operating system. The ```Hypervisor``` or emulator, is VirtualBox, and it allocates a certain amount of the ```host machine```'s resources to the ```guest machine```.
+
+I've tested this with MacOS 10.12.2 as well as Windows 10 installed on the ```host machine```.
 
 ## Dependencies
 1. [VirtualBox](https://www.virtualbox.org) is a hypervisor which will allow us to run a self-contained linux virtual machine. Your host machine can be Mac OS X, Windows or indeed another Linux distribution. Visit the [downloads](https://www.virtualbox.org/wiki/Downloads) page to get the correct version for your system.
