@@ -14,7 +14,7 @@ Make sure you are reliably connected to the internet before attempting this. Vag
 3.  Extract the zip and copy the ```vagrant-spark-master``` folder to a convenient permanent directory, such as your documents folder.
 4.  Open a terminal and ```cd``` to the ```vagrant-spark-master``` directory
 5.  Run the command ```vagrant up``` in the terminal
-6.  Go make some tea/coffee, this bit takes a while. Vagrant will download and install Apache Spark as well as the Python 2.7 version of Anaconda, which includes Jupyter and lots of other fun python datascience packages you can play with like numpy and scikitlearn.
+6.  Go relax for a while, make some tea or coffee, this bit takes some time. Vagrant will download and install Apache Spark as well as the Python 2.7 version of Anaconda, which includes Jupyter and lots of other fun python data science packages you can play with like numpy and scikit-learn.
 7.  Once complete run the command ```vagrant ssh``` in the same ```vagrant-spark-master``` directory in the terminal.
 8.  You should now be connected to your virtual machine's terminal. Run the command ```pyspark```. This will start the Jupyter server.
 9.  In your web browser go to [http://localhost:8888](http://localhost:8888)
@@ -26,4 +26,4 @@ Make sure you are reliably connected to the internet before attempting this. Vag
 Within the ```vagrant-spark-master``` directory extracted from the downloaded zip, you should see two directories ```data``` and ```notebooks```. Any files placed in ```data``` will be accessible at the path ```/data``` from within a notebook. Any notebooks placed in the ```notebooks``` directory will show up in the ```notebooks``` directory in the Jupyter interface.
 
 ## Feedback
-I've only tested this on my machine which is a Mac. It should work on windows too, but if anyone has issues please concat me on Moodle, in class or via Github Issues above.
+I've only tested this on my machine which is a Mac. It should work on windows too, but if anyone has issues please contact me on Moodle, in class or via Github Issues above. Also feel free to send pull requests with bug fixes. 
