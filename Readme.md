@@ -36,9 +36,9 @@ Within the ```vagrant-spark-master``` directory extracted from the downloaded zi
 ### Vagrant Commands
 These commands all must be run in a terminal within the ```vagrant-spark-master``` directory
 
-* To stop the virtual machine type ```vagrant halt```
-* To delete the machine type ```vagrant destroy```
-* To start the machine (after stopping or destroying) type ```vagrant up```
+* To stop the virtual machine run ```vagrant halt```
+* To delete the machine run ```vagrant destroy```
+* To start the machine (after stopping or destroying) run ```vagrant up```
 
 ### Advanced Settings
 
