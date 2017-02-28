@@ -31,6 +31,7 @@ cd /tmp && wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.0-bin-hadoop2.7.t
 tar xvfz spark-2.0.0-bin-hadoop2.7.tgz
 install -d /opt/spark
 cp -r spark-2.0.0-bin-hadoop2.7/* /opt/spark
+chown -R apache-spark:apache-spark /opt/spark
 
 # configure SPARK_HOME in bashrc
 echo 'export SPARK_HOME' >> /home/ubuntu/.bashrc
@@ -46,8 +47,8 @@ After=network-online.target
 [Service]
 User=apache-spark
 Type=forking
-ExecStart=/opt/spark/sbin/start-all.sh
-ExecStop=/opt/spark/sbin/stop-all.sh
+ExecStart=/opt/spark/sbin/start-master.sh
+ExecStop=/opt/spark/sbin/stop-master.sh
 TimeoutSec=30
 Restart= on-failure
 RestartSec= 30
@@ -59,8 +60,8 @@ WantedBy=multi-user.target
 END
 
 systemctl daemon-reload
-systemctl start apache-spark.service
-systemctl enable apache-spark.service
+#systemctl start apache-spark.service
+#systemctl enable apache-spark.service
 
 # http://stackoverflow.com/questions/25321139/vagrant-installing-anaconda-python
 miniconda=Anaconda2-4.3.0-Linux-x86_64.sh
