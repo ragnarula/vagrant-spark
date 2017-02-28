@@ -60,8 +60,8 @@ WantedBy=multi-user.target
 END
 
 systemctl daemon-reload
-systemctl start apache-spark.service
-systemctl enable apache-spark.service
+#systemctl start apache-spark.service
+#systemctl enable apache-spark.service
 
 # http://stackoverflow.com/questions/25321139/vagrant-installing-anaconda-python
 miniconda=Anaconda2-4.3.0-Linux-x86_64.sh
