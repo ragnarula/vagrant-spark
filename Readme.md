@@ -7,6 +7,8 @@ I've created this script to help users set up an Ubuntu 16.04 virtual machine wi
 *  27/02/2017
   * Added support for Python3. Use the command ```pyspark3``` to start jupyter with python3 support. This seems to work better for coursework (See step 8).
   * Added documentation of VT-x support
+* 28/02/2017
+  * Removed the spark master daemon. Running pyspark or pyspark3 now causes pyspark to launch a single spark worker (the default behaviour). As this is a single node, there is no benefit to having a separate master process.
   
 ## What is a virtual machine?
 From wikipedia:
