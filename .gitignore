@@ -4,6 +4,7 @@ notebooks/*
 !notebooks/readme.txt
 data/*
 !data/readme.txt
+scripts/*.retry
 ### Linux ###
 *~
 

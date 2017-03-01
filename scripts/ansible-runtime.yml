@@ -1,0 +1,12 @@
+---
+- hosts: all
+  gather_facts: true
+  become: true
+  tasks:
+  - name: Set memory limit for Pyspark
+    lineinfile:
+      dest: /opt/spark/conf/spark-defaults.conf
+      regexp: ^spark.driver.memory
+      line: spark.driver.memory {{ (ansible_memtotal_mb*0.75)|int|abs }}m
+      state: present
+      create: yes
