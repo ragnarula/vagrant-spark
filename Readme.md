@@ -9,7 +9,12 @@ I've created this script to help users set up an Ubuntu 16.04 virtual machine wi
   * Added documentation of VT-x support
 * 28/02/2017
   * Removed the spark master daemon. Running pyspark or pyspark3 now causes pyspark to launch a single spark worker (the default behaviour). As this is a single node, there is no benefit to having a separate master process.
-  
+* 09/03/2017
+  * Changed the provision scripts to open source ansible scripts instead of custom shell scripts
+  * Spark Installer: https://github.com/azavea/ansible-spark
+  * Anaconda Installer: https://github.com/andrewrothstein/ansible-anaconda
+  * Only python3 supported now, seems to work better overall.
+
 ## What is a virtual machine?
 From wikipedia:
  > In computing, a virtual machine (VM) is an emulation of a computer system.
@@ -39,7 +44,7 @@ Make sure you are reliably connected to the internet before attempting this. Vag
 5.  Run the command ```vagrant up``` in the terminal
 6.  Go relax for a while, make some tea or coffee, this bit takes some time. Vagrant will download and install Apache Spark as well as the Python 2.7 version of Anaconda, which includes Jupyter and lots of other fun python data science packages you can play with like numpy and scikit-learn.
 7.  Once complete run the command ```vagrant ssh``` in the same ```vagrant-spark-master``` directory in the terminal.
-8.  You should now be connected to your virtual machine's terminal. Run the command ```pyspark3```. This will start the Jupyter server with Python 3. or use ```pyspark``` to run jupyter with python2.7.
+8.  You should now be connected to your virtual machine's terminal. Run the command ```pyspark```. This will start the Jupyter server with Python 3.
 9.  In your web browser go to [http://localhost:8888](http://localhost:8888)
 10. You should see the Jupyter interface!
 
