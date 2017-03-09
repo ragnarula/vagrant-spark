@@ -1,0 +1,31 @@
+---
+galaxy_info:
+  author: Andrew Rothstein
+  description: Role that install Anaconda and a bunch of conda packages
+  company: BlackRock
+  license:
+    - MIT
+  min_ansible_version: 2.0
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Alpine
+      versions:
+        - all
+
+  galaxy_tags:
+    - anaconda
+    - python
+
+# dependencies:
+#   - role: andrewrothstein.bash
+#     version: v1.0.0
+#   - role: andrewrothstein.alpine-glibc-shim
+#     version: v2.0.0
